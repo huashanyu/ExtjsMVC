@@ -8,8 +8,8 @@ Ext.define('MV.store.UserStore', {
             type: 'ajax',
             url: "user.json",
             reader: {
-                type: 'json',
-                root: 'data'
+                type: 'json'
+//                rootProperty: 'data'
             },
             writer: {
                 type: 'json'

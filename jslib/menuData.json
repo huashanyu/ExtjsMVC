@@ -1,0 +1,39 @@
+ [
+            {
+                name: "Bookmark 1",
+                text: "第一个哦",
+                element: "1",
+                children: [
+                    {
+                        text: "第二个哦",
+                        name: "Bookmark 1",
+                        leaf: false,
+                        element: "4",
+                        children:[{
+                            text: "第二子子节点哦",
+                            name: "Bookmark 1",
+                            leaf: true,
+                            element: "4"
+                        }]
+                    },
+                    {
+                        text: "第三个哦",
+                        name: "Bookmark 1",
+                        leaf: true,
+                        element: "5"
+                    }
+                ]
+
+            },
+            {
+                name: "Bookmark 1",
+                text: "第第二个哦",
+                element: "22",
+                children:[{
+                    text: "第最后一个子节点哦",
+                    name: "Bookmark 1",
+                    leaf: true,
+                    element: "4"
+                }]
+            }
+        ]

@@ -1,4 +1,5 @@
 Ext.onReady(function () {
+
     Ext.Loader.setConfig({
         enabled: true
     });
@@ -11,6 +12,12 @@ Ext.onReady(function () {
         launch: function () {
             Ext.create("Ext.container.Viewport", {
                 layout: 'border',
+                default:{
+                    split:true,
+                    collapsible: true,
+                    bodyStyle: 'padding:15px'
+
+                },
                 items: [
                     {
                         xtype: 'userList',
@@ -23,27 +30,41 @@ Ext.onReady(function () {
                         title:'这是南边的天空',
                         xtype:'panel',
                         region:'south',
-                        split:true,
                         layout:'fit'
 
-                    },{
+                    },
+                    {
                         title:'这是北边的天空',
                         xtype:'panel',
                         region:'north',
                         split:true,
-                        layout:'fit'
+                        header:false,
+                        frame:true,
+                        border:false,
+                        height:180,
+                        layout:'fit',
+                       bodyStyle:{background:'url("./static/header.png") no-repeat'}
 
-                    },{
+                    },
+                    {
+                        xtype:'',
+                        title:'这是西方的天空',
+                        width:200,
+                        region:'west',
+                        split:true,
+                        layout:'accordion',
+                        items:[{
+                         xtype:'menuList'
+                        },{
+                            xtype:'panel',
+                            html:'<div>fsfafsafafafafaf</div>'
+                        }]
+
+                    },
+                    {
                         title:'这是东边的天空',
                         xtype:'panel',
                         region:'east',
-                        split:true,
-                        layout:'fit'
-
-                    },{
-                        title:'这是西方的天空',
-                        xtype:'panel',
-                        region:'west',
                         split:true,
                         layout:'fit'
 
@@ -51,9 +72,9 @@ Ext.onReady(function () {
                 ]});
         },
 
-        models: ['UserModel'],
-        stores: ['UserStore'],
-        controllers: ['userController'],
-        view: ['userView']
+        models: ['UserModel','MenuModel'],
+        stores: ['UserStore','MenuStore'],
+        controllers: ['userController','MenuController'],
+        view: ['userView','MenuView']
     });
 });
