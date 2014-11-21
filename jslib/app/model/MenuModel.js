@@ -3,5 +3,5 @@
  */
 Ext.define('MV.model.MenuModel', {
     extend: 'Ext.data.Model',
-    fileds: ["name","element"]
+    fileds: ["name","element","dataUrl"]
 });

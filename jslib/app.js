@@ -48,7 +48,7 @@ Ext.onReady(function () {
                     },
                     {
                         xtype:'',
-                        title:'这是西方的天空',
+                        title:'信息管理导航',
                         width:200,
                         region:'west',
                         split:true,
@@ -56,6 +56,7 @@ Ext.onReady(function () {
                         items:[{
                          xtype:'menuList'
                         },{
+                            title:'部门管理',
                             xtype:'panel',
                             html:'<div>fsfafsafafafafaf</div>'
                         }]

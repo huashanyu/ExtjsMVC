@@ -13,14 +13,16 @@
                             text: "第二子子节点哦",
                             name: "Bookmark 1",
                             leaf: true,
-                            element: "4"
+                            element: "4",
+                            dataUrl:"treeDataUrl.json"
                         }]
                     },
                     {
                         text: "第三个哦",
                         name: "Bookmark 1",
                         leaf: true,
-                        element: "5"
+                        element: "5",
+                        dataUrl:"treeDataUrl.json"
                     }
                 ]
 
@@ -33,7 +35,8 @@
                     text: "第最后一个子节点哦",
                     name: "Bookmark 1",
                     leaf: true,
-                    element: "4"
+                    element: "4",
+                    dataUrl:"treeDataUrl.json"
                 }]
             }
         ]
