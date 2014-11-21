@@ -6,8 +6,8 @@ Ext.define('MV.view.MenuView',{
     store:'MV.store.MenuStore',
     alias:'widget.menuList',
     title:'权限管理',
+    icon:'../jslib/static/icon/folder/folder_database.png',
     animate:true,
-    collapsible:true,
     enableDD:true,
     enableDrag:true,
     autoScroll:true,
@@ -16,5 +16,8 @@ Ext.define('MV.view.MenuView',{
     frame:true,
     autoShow:true,
    rootVisible:false,
-   renderTo:Ext.getBody()
+   renderTo:Ext.getBody(),
+    initComponent: function () {
+        this.callParent(arguments);
+    }
 });

@@ -5,9 +5,12 @@ Ext.define("MV.store.MenuStore",{
     extend:'Ext.data.TreeStore',
     model:'MV.model.MenuModel',
     rootvisible:false,
+    autoSync:true,
     proxy:{
         type:'ajax',
-        url:'menuData.json',
+        api:{
+            read:'menuData.json'
+        },
         reader:{
             type:'json'
         }
