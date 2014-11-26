@@ -30,8 +30,8 @@ Ext.define('MV.controller.MenuController', {
         }
         for (var i = 0; i < centerIterm.length; i++) {
             if ((centerIterm[i].id.split('-')[0] == dataUrl.split('.')[2])) {
-//                this.updateItem(centerTabPanel, centerIterm[i].id);
-               this.fireEvent('tabchange',centerTabPanel,centerIterm[i]);
+               this.updateItem(centerTabPanel, centerIterm[i].id);
+//               this.fireEvent('tabchange',centerTabPanel,centerIterm[i]);
                 isAddNewTabPanel = false;
                 break;
             }
@@ -42,18 +42,17 @@ Ext.define('MV.controller.MenuController', {
 //            centerTabPanel.setActiveItem(newView);
             _this.updateItem(centerTabPanel, newView.id);//为新的view添加数据
             centerTabPanel.on('tabchange', _this.tabChange);
-            this.fireEvent('tabchange',centerTabPanel,newView);
+//            this.fireEvent('tabchange',centerTabPanel,newView);
         }
     },
     updateItem: function (centerTabPanel, updateTabId) {
-
         Ext.getCmp(updateTabId).store.reload();
-        centerTabPanel.setActiveItem(updateTabId);
+        centerTabPanel.setActiveTab(updateTabId);
     },
     tabChange: function (tabPanel, newCard, oldCard, eOpts) {
         //TODO 需要对在添加新的panel 禁用tabchange事件  若不禁用会出现两次http 请求
         Ext.getCmp(newCard.id).store.reload();
-        tabPanel.setActiveItem(newCard.id);
+        tabPanel.setActiveTab(newCard.id);
     },
     views: ['MV.view.MenuView'],
     models: ['MV.model.MenuModel'],
