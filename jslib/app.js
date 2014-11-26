@@ -1,3 +1,4 @@
+var viewport;
 Ext.onReady(function () {
 
     Ext.Loader.setConfig({
@@ -10,54 +11,58 @@ Ext.onReady(function () {
         enableQuickTips: true,
         requires: ['Ext.container.Viewport'],
         launch: function () {
-            Ext.create("Ext.container.Viewport", {
+            viewport = Ext.create("Ext.container.Viewport", {
                 layout: 'border',
-                defaults:{
-                    split:true,
-                    collapsible: true
-//                    bodyStyle: 'padding:15px'
-
+                defaults: {
+                    split: true,
+                    collapsible: true,
+                    border: 0
                 },
                 items: [
                     {
-                        xtype: 'userList',
-                        title: '欢迎',
+                        id: 'centerTabPanel',
+                        xtype: 'tabpanel',
                         region: 'center',
-                        split: true,
-                        layout: 'fit'
+                        items: [
+//                            {
+//                                xtype: 'userView',
+//                                closable: true,
+//                                layout: 'fit'
+//                            }
+                        ]
                     },
                     {
                         title: '这是南边的天空',
                         xtype: 'panel',
                         region: 'south',
-                        layout: 'fit'
-
+                        layout: 'fit',
+                        border: 0,
+                        frame: true
                     },
                     {
                         title: '这是北边的天空',
                         xtype: 'panel',
                         region: 'north',
                         split: true,
-                        header: false,
-                        frame: true,
-                        border: false,
+                        header: false,//取消头部信息
                         height: 180,
                         layout: 'fit',
                         bodyStyle: {background: 'url("./static/header.png") no-repeat'}
 
                     },
                     {
-                        id:'treeBarPanel',
+                        id: 'treeBarPanel',
                         title: '信息管理导航',
                         titleCollapse: true,
                         xtype: 'panel',
                         width: 200,
                         region: 'west',
+                        frame: true,//该属性能够为panel添加背景色
                         split: true,
                         layout: 'accordion',
                         items: [
                             {
-                                xtype: 'menuList',
+                                xtype: 'MenuView',
                                 width: 200
                             },
                             {
@@ -80,9 +85,9 @@ Ext.onReady(function () {
                 ]});
         },
 
-        models: ['UserModel', 'MenuModel'],
-        stores: ['UserStore', 'MenuStore'],
-        controllers: ['userController', 'MenuController']
+        models: ['UserModel', 'MenuModel', 'StudentModel'],
+        stores: ['UserStore', 'MenuStore', 'StudentStore'],
+        controllers: ['userController', 'MenuController', 'StudentController']
 //        views: ['userView', 'MenuView']
     });
 });

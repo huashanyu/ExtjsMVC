@@ -4,10 +4,10 @@
 Ext.define('MV.view.userView', {
     extend: 'Ext.grid.Panel',
     title: 'gird显示',
-    alias:'widget.userList',
-    frame:true,
-    width:600,
-    height:300,
+    alias:'widget.userView',
+//    frame:true,
+//    height:document.body.clientHeight*100,
+//    width:document.body.clientWidth*100,
     autoShow:true,
     columns:[
         {dataIndex:'name',text:'姓名',flex:1},

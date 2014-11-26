@@ -4,7 +4,7 @@
 Ext.define('MV.view.MenuView',{
     extend:'Ext.tree.Panel',
     store:'MV.store.MenuStore',
-    alias:'widget.menuList',
+    alias:'widget.MenuView',
     title:'权限管理',
     icon:'../jslib/static/icon/folder/folder_database.png',
     animate:true,
@@ -13,7 +13,7 @@ Ext.define('MV.view.MenuView',{
     autoScroll:true,
     useArrows:true,
     root:'asyncTreeNode',
-    frame:true,
+//    frame:true,
     autoShow:true,
    rootVisible:false,
    renderTo:Ext.getBody(),

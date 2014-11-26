@@ -14,7 +14,7 @@ Ext.define('MV.store.UserStore', {
             writer: {
                 type: 'json'
             }
-        },
-        autoLoad: true
+        }
+//        autoLoad: true
     }
 );

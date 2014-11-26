@@ -14,7 +14,7 @@
                             name: "Bookmark 1",
                             leaf: true,
                             element: "4",
-                            dataUrl:"treeDataUrl.json"
+                            dataUrl:"MV.view.StudentView"
                         }]
                     },
                     {
@@ -22,7 +22,7 @@
                         name: "Bookmark 1",
                         leaf: true,
                         element: "5",
-                        dataUrl:"treeDataUrl.json"
+                        dataUrl:"MV.view.userView"
                     }
                 ]
 
@@ -36,7 +36,7 @@
                     name: "Bookmark 1",
                     leaf: true,
                     element: "4",
-                    dataUrl:"treeDataUrl.json"
+                    dataUrl:"MV.view.userView"
                 }]
             }
         ]
