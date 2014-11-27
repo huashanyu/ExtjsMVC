@@ -24,11 +24,6 @@ Ext.onReady(function () {
                         xtype: 'tabpanel',
                         region: 'center',
                         items: [
-//                            {
-//                                xtype: 'userView',
-//                                closable: true,
-//                                layout: 'fit'
-//                            }
                         ]
                     },
                     {
