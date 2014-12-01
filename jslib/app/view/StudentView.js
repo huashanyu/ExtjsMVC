@@ -6,7 +6,6 @@ Ext.define('MV.view.StudentView', {
     store: 'MV.store.StudentStore',
     title: '学生信息展示',
     alias: 'widget.StudentView',
-//    autoShow:true,
     columns: [
         {dataIndex: 'id', text: '编号', flex: 1},
         {dataIndex: 'name', text: '姓名', flex: 1},

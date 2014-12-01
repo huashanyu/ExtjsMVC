@@ -1,6 +1,6 @@
 var viewport;
 Ext.onReady(function () {
-
+    Ext.tip.QuickTipManager.init
     Ext.Loader.setConfig({
         enabled: true
     });
@@ -83,6 +83,6 @@ Ext.onReady(function () {
         models: ['UserModel', 'MenuModel', 'StudentModel'],
         stores: ['UserStore', 'MenuStore', 'StudentStore'],
         controllers: ['userController', 'MenuController', 'StudentController']
-//        views: ['userView', 'MenuView']
+//        views: ['UserFormView']
     });
 });

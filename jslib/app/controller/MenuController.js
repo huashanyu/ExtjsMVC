@@ -52,7 +52,7 @@ Ext.define('MV.controller.MenuController', {
             var newView = Ext.create(dataUrl, {closable: true});
             centerTabPanel.add(newView);
             if (centerIterm.length == 1) {
-                _this.updateItem(centerTabPanel, newView.id);//为新的第一个view添加数据其他view依靠tabchange事件触发
+                _this.updateItem(centerTabPanel, newView.id);//为新的第一个view添加数据  其他view依靠tabchange事件触发
             }
             //高亮当前panel
             centerTabPanel.setActiveTab(newView.id);
