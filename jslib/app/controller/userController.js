@@ -20,11 +20,10 @@ Ext.define('MV.controller.userController', {
         });
     },
     addUser: function (_this,e,option) {
-//        console.log(_this);
-//        console.log(e);
-//        console.log(option);
-
-      Ext.create('MV.view.testWindow').show();
+      var testWindow=Ext.create('MV.view.testWindow');
+        testWindow.add(Ext.create('MV.view.UserFormView'));
+        testWindow.doLayout();
+        testWindow.show();
     },
     deleteUser: function () {
 

@@ -24,7 +24,7 @@ Ext.define('MV.view.testWindow', {
     animateTarget: Ext.getBody(),
     constrain: true,
     initComponent: function () {
-        Ext.applyIf(this, {items: Ext.create('MV.view.UserFormView')});
+//        Ext.applyIf(this, {items: Ext.create('MV.view.UserFormView')});
         this.callParent(arguments);
     }
 });
