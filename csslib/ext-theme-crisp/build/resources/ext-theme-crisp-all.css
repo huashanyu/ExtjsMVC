@@ -7433,8 +7433,10 @@ body.x-border-layout-ct, div.x-border-layout-ct {
 }
 
 .x-tab-active.x-tab-default {
-    border-color: #3892d3;
-    background-color: #3892d3
+    /*border-color: #3892d3;*/
+    /*background-color: #3892d3*/
+    border-color: #c1ddf1;
+    background-color: #c1ddf1
 }
 
 .x-tab-active.x-tab-default .x-tab-inner-default {

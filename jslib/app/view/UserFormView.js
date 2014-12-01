@@ -5,37 +5,29 @@ Ext.define('MV.view.UserFormView', {
     extend: 'Ext.form.FormPanel',
     alias: 'widget.UserFormView',
     defaultType: 'textfield',
-    labelAlign: 'right',
-    labelWidth: 65,
+    labelAlign: 'left',
+//    labelWidth: 65,
     frame: false,
-    border: false,
+    border:false,
     trackResetOnLoad: true,//是否在表单初建的时候清除数据
-    store:'MV.store.UserFromStore',
-    autoShow:true,
-//    layoutConfig: {
-//        labelSeparator: ':'
-//    },
-    items: {
-        defaults: {
-
-            labelAlign:'left',
-            msgTarget: 'side'
-        },
-        items: [
-            {xtype: 'textfield', lablefield: '姓名'},
-            {xtype: 'textfield', lablefield: '年龄'},
-            {xtype: 'textfield', lablefield: '性别'},
-            {xtype: 'datefield', lablefield: '生日', format: 'Y-m-d'}
-        ]
+    store: 'MV.store.UserFromStore',
+    autoShow: true,
+        layoutConfig: {
+        labelSeparator: ':'
     },
-//在form表单页脚处显示按钮
+    items: [
+        {fieldLabel: '姓名'},
+        {fieldLabel: '年龄'},
+        {fieldLabel: '性别'},
+        {xtype: 'datefield', fieldLabel: '生日', format: 'Y-m-d'}
+    ],
+//form表单页脚处显示按钮
 //    dockedItems: [{
 //    xtype: 'toolbar',
 //    dock: 'bottom',
 //    ui: 'footer',
 //    defaults: {minWidth: minButtonWidth},
 //    items: [
-//        { xtype: 'component', flex: 1 },
 //        { xtype: 'button', text: 'Button 1' }
 //    ]
 //}]  || 等价下面的代码

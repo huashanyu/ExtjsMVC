@@ -23,6 +23,9 @@ Ext.onReady(function () {
                         id: 'centerTabPanel',
                         xtype: 'tabpanel',
                         region: 'center',
+//                        defaults:{
+//                            style:{'.x-tab-active.x-tab-default:border-color: #3892d3;background-color: #3892d3'}
+//                        },
                         items: [
                         ]
                     },
@@ -40,7 +43,7 @@ Ext.onReady(function () {
                         region: 'north',
                         split: true,
                         header: false,//取消头部信息
-                        height: 180,
+                        height: 85,
                         layout: 'fit',
                         bodyStyle: {background: 'url("./static/header.png") no-repeat'}
 

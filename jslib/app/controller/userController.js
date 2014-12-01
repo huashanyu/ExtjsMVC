@@ -3,7 +3,6 @@
  */
 Ext.define('MV.controller.userController', {
     extend: 'Ext.app.Controller',
-    require:'MV.view.UserFormView',
     init: function () {
         this.control({
             'userView button[action=add]': {
@@ -21,10 +20,11 @@ Ext.define('MV.controller.userController', {
         });
     },
     addUser: function (_this,e,option) {
-        console.log(_this);
-        console.log(e);
-        console.log(option);
-        viewport.bringToFront(Ext.create('MV.view.UserFormView').show());
+//        console.log(_this);
+//        console.log(e);
+//        console.log(option);
+
+      Ext.create('MV.view.testWindow').show();
     },
     deleteUser: function () {
 
