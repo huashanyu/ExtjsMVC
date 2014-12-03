@@ -4381,7 +4381,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
     border-color: #cecece;
     border-width: 0;
     background-image: none;
-    background-color: #e6e6e6
+    /*background-color: #e6e6e6*/
 }
 
 .x-toolbar-footer .x-tool-img {

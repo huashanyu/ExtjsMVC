@@ -10,13 +10,13 @@ Ext.define('MV.view.MenuView',{
     animate:true,
     enableDD:true,
     enableDrag:true,
-    autoScroll:true,
+    autoScroll:false,
     useArrows:true,
     root:'asyncTreeNode',
-//    frame:true,
+    frame:true,
     autoShow:true,
-   rootVisible:false,
-   renderTo:Ext.getBody(),
+    rootVisible:false,
+    renderTo:Ext.getBody(),
     initComponent: function () {
         this.callParent(arguments);
     }

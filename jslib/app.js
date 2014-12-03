@@ -1,6 +1,7 @@
-var viewport;
 Ext.onReady(function () {
-    Ext.tip.QuickTipManager.init
+    Ext.tip.QuickTipManager.init;
+    Ext.QuickTips.init();
+    Ext.form.Field.prototype.msgTarget='under';
     Ext.Loader.setConfig({
         enabled: true
     });
@@ -9,9 +10,9 @@ Ext.onReady(function () {
         appFolder: "app",//应用目录
         extend: 'Ext.app.Application',
         enableQuickTips: true,
-        requires: ['Ext.container.Viewport'],
+        requires: ['Ext.container.Viewport','MV.util.utilWindow','MV.view.UserFormView'],//TODO 对于utilWindow和UserFormView类似的panel需要考虑脱离主要代码进行加载
         launch: function () {
-            viewport = Ext.create("Ext.container.Viewport", {
+            Ext.create("Ext.container.Viewport", {
                 layout: 'border',
                 defaults: {
                     split: true,

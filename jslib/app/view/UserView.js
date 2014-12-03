@@ -26,7 +26,7 @@ Ext.define('MV.view.userView', {
         {xtype: 'button', text: '删除', icon: '../jslib/static/icon/user/user_delete.png', action: 'delete'},
         {xtype: 'datefield', name: 'dateFrom', format: 'Y-m-d', fieldLabel: '修改日期', labelWidth: 58, labelAlign: 'right'},
         {xtype: 'datefield', name: 'dateTo', format: 'Y-m-d', maxValue: new Date(), fieldLabel: '到', labelWidth: 15, labelAlign: 'right'},
-        {xtype: 'textfield',fieldLabel: '关键字', labelWidth: 43, placeholder: '关键字'},
+        {xtype: 'textfield',name:'keyWord',fieldLabel: '关键字', labelWidth: 43, placeholder: '关键字'},
         {xtype: 'button', text: '查找', icon: '../jslib/static/icon/map/magnifier.png', action: 'search'},
         {xtype: 'button', text: '刷新', icon: '../jslib/static/icon/arrow/arrow_refresh.png', action: 'reflush', defaultAlign: 'right'}
     ],
