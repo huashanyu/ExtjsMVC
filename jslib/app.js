@@ -10,7 +10,7 @@ Ext.onReady(function () {
         appFolder: "app",//应用目录
         extend: 'Ext.app.Application',
         enableQuickTips: true,
-        requires: ['Ext.container.Viewport','MV.util.utilWindow','MV.view.UserFormView'],//TODO 对于utilWindow和UserFormView类似的panel需要考虑脱离主要代码进行加载
+        requires: ['Ext.container.Viewport','MV.util.utilWindow','MV.view.UserFormView','MV.view.ContextMenuView'],//TODO 对于utilWindow和UserFormView类似的panel需要考虑脱离主要代码进行加载
         launch: function () {
             Ext.create("Ext.container.Viewport", {
                 layout: 'border',
